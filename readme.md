@@ -155,6 +155,8 @@ python -c "import os;from dotenv import load_dotenv;load_dotenv();print(os.geten
 
 ---
 
-## Licencia / Autoría
-Trabajo académico. Autoría del equipo. Sin garantías.
+## Integrantes de la actividad
+Trabajo académico. 
+Interian Pech Jose Alejandro
+Fernando Gamaliel Rodriguez
 

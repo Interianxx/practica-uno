@@ -3,7 +3,7 @@ import base64
 
 def main():
     key = encrypAES.getKey(32)  # 256-bit
-    iv_b64, ct_b64 = encrypAES.encode(key, "Xeoz vamos a sacar una mac")
+    iv_b64, ct_b64 = encrypAES.encode(key, "Este es un mensaje secreto. Se necesita dinero")
     key_b64 = base64.b64encode(key).decode("utf-8")
 
     paquete = {

@@ -6,8 +6,11 @@ load_dotenv()  # carga .env en variables de entorno
 
 with open("mensaje_oculto.json","r",encoding="utf-8") as f:
     pkg = json.load(f)
-
-key_b64 = os.getenv("KEY_B64") or pkg["key_b64"]
+# La parte de donde se extrae la llave del json no deberia estar, pero es solo para fines academicos
+# En un caso real, la llave no debe estar en el mismo lugar que el mensaje cifrado, ni siquiera en el mismo servidor
+# En este caso metemos como una variable de entorno que podemos decir que es un metodo "seguro" de tener la llave en un proyecto 
+# Con el manejo debido en el .gitignore, no deberiamos filtrar la llave en un repositorio publico
+key_b64 = os.getenv("KEY_B64") or pkg["key_b64"]  
 iv_b64 = pkg["iv_b64"]
 ct_b64 = pkg["ciphertext_b64"]
 
